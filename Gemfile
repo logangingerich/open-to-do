@@ -19,6 +19,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap'
 gem 'figaro'
+gem 'active_model_serializers', '~> 0.10.0'
+gem 'jbuilder'
 
 group :development, :test do
   gem 'byebug'

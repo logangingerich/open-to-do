@@ -20,6 +20,12 @@ class Api::ItemsController < ApiController
     end
   end
 
+  def index
+    list = List.find(params[:list_id])
+    items = list.items
+    render json: items
+  end
+
   private
   def item_params
     params.require(:item).permit(:title, :completed)

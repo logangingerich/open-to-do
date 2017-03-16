@@ -32,6 +32,12 @@ class Api::ListsController < ApiController
     end
   end
 
+  def index
+    user = User.find(params[:user_id])
+    lists = user.lists
+    render json: lists
+  end
+
   private
   def list_params
     params.require(:list).permit(:title, :private)
